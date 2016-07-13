@@ -3,7 +3,8 @@ package pajaros;
 public class Main {
 	
 	public static void main(String[] args){
-		Piolin piolin = new Piolin('M', 3, 17, 4);
+		//EJERCICIO 1
+		/*Piolin piolin = new Piolin('M', 3, 17, 4);
 		Loro loro = new Loro('H', 2, 'N', "Rojo");
 		
 		piolin.quienSoy();
@@ -22,7 +23,28 @@ public class Main {
 		
 		loro.deDondeEres();
 		
-		Ave.getNumAvesCreadas();
+		Ave.getNumAvesCreadas();*/
+		
+		//EJERCICIO 2
+		Piolin[] piolines = new Piolin[3];
+		
+		piolines[0] = new Piolin('M', 3, 15, 2, new DatosPersonales("pikolon", "pakito"));
+		piolines[1] = new Piolin('H', 5, 30, 12, null);
+		piolines[2] = new Piolin('H', 1, 7, 1, null);
+		
+		piolines[1].nombres = new DatosPersonales("pikolin", "patxi");
+		
+		Loro lorito = new Loro('M', 5, 'N', "verde", null);
+		
+		lorito.cantar();
+		
+		for(int i=0;i<piolines.length;i++){
+			piolines[i].cantar();
+		}
+		
+		System.out.println("El nombre del piolin es: " 
+				+ piolines[0].nombres.getNombreAve() + " y su dueño se llama: " 
+				+ piolines[0].nombres.getNombreDueno());
 	}
 
 }

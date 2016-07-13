@@ -1,15 +1,15 @@
 package pajaros;
 
-public class Canario extends Ave{
+public abstract class Canario extends Ave{
 	
 	public int tamano;
 	
-	public Canario(char sexo, int edad){
-		super(sexo, edad);
+	public Canario(char sexo, int edad, DatosPersonales nombres){
+		super(sexo, edad, nombres);
 	}
 	
-	public Canario(char sexo, int edad, int tamano){
-		super(sexo, edad);
+	public Canario(char sexo, int edad, int tamano, DatosPersonales nombres){
+		super(sexo, edad, nombres);
 		this.tamano = tamano;
 	}
 	

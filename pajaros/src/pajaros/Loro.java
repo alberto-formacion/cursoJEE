@@ -5,8 +5,8 @@ public class Loro extends Ave{
 	public char region;
 	public String color;
 	
-	public Loro (char sexo, int edad, char region, String color){
-		super(sexo, edad);
+	public Loro (char sexo, int edad, char region, String color, DatosPersonales nombres){
+		super(sexo, edad, nombres);
 		this.region = region;
 		this.color = color;
 	}
@@ -28,6 +28,11 @@ public class Loro extends Ave{
 		default:
 			System.out.println("La region no es correcta");
 		}
+	}
+
+	@Override
+	public void cantar() {
+		System.out.println("Piiiiiiiiio-piiiiiiiiio loro bonito");
 	}
 
 }

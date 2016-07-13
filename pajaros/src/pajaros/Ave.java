@@ -1,15 +1,17 @@
 package pajaros;
 
-public class Ave {
+public abstract class Ave {
 	
 	public char sexo;
 	public int edad;
+	public DatosPersonales nombres;
 	
 	private static int numAvesCreadas = 0;
 	
-	public Ave (char sexo, int edad){
+	public Ave (char sexo, int edad, DatosPersonales nombres){
 		this.sexo = sexo;
 		this.edad = edad;
+		this.nombres = nombres;
 		
 		numAvesCreadas++;
 	}
@@ -26,5 +28,7 @@ public class Ave {
 			System.out.println("Hembra");
 		}
 	}
+	
+	public abstract void cantar();
 
 }
