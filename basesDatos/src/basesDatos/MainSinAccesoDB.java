@@ -17,16 +17,9 @@ public class MainSinAccesoDB {
 		
 		String ciudad = entrada.nextLine();
 		
-		try {
-			Ciudad c = db.buscarCiudad(ciudad);
+		Ciudad c = db.buscarCiudad(ciudad);
 			
-			System.out.println(c.toString());
-			
-		} catch (ClassNotFoundException e) {
-			e.printStackTrace();
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
+		System.out.println(c.toString());
 	}
 
 }
