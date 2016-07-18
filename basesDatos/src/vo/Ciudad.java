@@ -15,6 +15,13 @@ public class Ciudad {
 		this.populacion = populacion;
 	}
 	
+	public Ciudad(String nombre, String codigoPais, String distrito, int populacion) {
+		this.nombre = nombre;
+		this.codigoPais = codigoPais;
+		this.distrito = distrito;
+		this.populacion = populacion;
+	}
+	
 	public int getId() {
 		return id;
 	}
@@ -47,6 +54,6 @@ public class Ciudad {
 	}
 	
 	public String toString(){
-		return "La ciudad se llama " + nombre + " esta en el distrito " + distrito + " y tiene una populacion de " + populacion + " habitantes";
+		return "La ciudad se llama " + nombre + "("+id+") esta en el distrito " + distrito + " y tiene una populacion de " + populacion + " habitantes";
 	}
 }
