@@ -17,7 +17,7 @@ import com.ipartek.login.vo.Usuario;
 /**
  * Servlet Filter implementation class LoginFilter
  */
-@WebFilter("/privado")
+@WebFilter(urlPatterns={"/privado/*"})
 public class LoginFilter implements Filter {
 
     /**
@@ -45,7 +45,7 @@ public class LoginFilter implements Filter {
 		if(u!=null){
 			chain.doFilter(request, response);
 		}else{
-			((HttpServletResponse)response).sendRedirect("login.html");
+			((HttpServletResponse)response).sendRedirect("../login.html");
 		}
 		
 	}
