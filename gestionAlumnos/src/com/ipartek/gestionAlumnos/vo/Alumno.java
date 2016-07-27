@@ -3,7 +3,7 @@ package com.ipartek.gestionAlumnos.vo;
 import java.util.ArrayList;
 
 public class Alumno {
-
+	private int idAlumno;
 	private String nombre;
 	private String apellido;
 	private String telefono;
@@ -12,7 +12,8 @@ public class Alumno {
 	private String pass;
 	private ArrayList<Curso> cursos;
 	
-	public Alumno(String nombre, String apellido, String telefono, String direccion, String usuario, String pass) {
+	public Alumno(int idAlumno, String nombre, String apellido, String telefono, String direccion, String usuario, String pass) {
+		this.idAlumno = idAlumno;
 		this.nombre = nombre;
 		this.apellido = apellido;
 		this.telefono = telefono;
@@ -64,6 +65,14 @@ public class Alumno {
 
 	public void setCursos(ArrayList<Curso> cursos) {
 		this.cursos = cursos;
+	}
+
+	public int getIdAlumno() {
+		return idAlumno;
+	}
+
+	public void setIdAlumno(int idAlumno) {
+		this.idAlumno = idAlumno;
 	}
 	
 }
